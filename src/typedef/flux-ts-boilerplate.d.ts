@@ -16,7 +16,7 @@ declare namespace FluxTsBoilerplate {
         removeChangeListener(cb: () => void);
     }
 
-    function Dispatcher();
+    function Dispatcher<T>();
 }
 
 export = FluxTsBoilerplate;
