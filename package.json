@@ -1,7 +1,7 @@
 {
   "author": "cantide5ga",
   "name": "flux-ts-boilerplate",
-  "description": "<description>",
+  "description": "Boilerplate static type-safe approach for Flux",
   "version": "0.2.0",
   "scripts": {
     "clean": "rm -rf build && rm -rf dist",
@@ -11,7 +11,7 @@
     "build:tsc": "npm run compile",
     "prebuild": "npm run clean && mkdir -p dist",
     "build": "npm run build:tsc",
-    "prepack": "",
+    "prepack": "npm run build && cp -r src/typedef build/src && cp package.json build && cp typings.json build",
     "test": "rm -rf build && npm run build:tsc && istanbul cover jasmine",
     "posttest": "istanbul check-coverage --statements 80 --functions 80 --branches 80 --lines 80",
     "publish:major": "npm version major && npm run prepack && npm publish build",
