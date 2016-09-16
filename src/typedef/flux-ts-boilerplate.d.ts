@@ -4,9 +4,17 @@ declare namespace FluxTsBoilerplate {
         payload?: any
     }
 
-    class AbstractActionCreator<T extends number> { }
+    abstract class AbstractActionCreator<T extends number> { 
+        dispatch(action: Action<T>);
+    }
 
-    class AbstractStore { }
+    abstract class AbstractStore { 
+        emitChange(): void;
+
+        addChangeListener(cb: () => void) : void;
+
+        removeChangeListener(cb: () => void);
+    }
 
     function Dispatcher();
 }
