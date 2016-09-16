@@ -1,6 +1,6 @@
 {
   "name": "flux-test-rig",
-  "main": "src/typedef/flux-ts-boilerplate.ts",
+  "main": "typedef/flux-ts-boilerplate.ts",
   "globalDependencies": {
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
     "node": "registry:dt/node#6.0.0+20160720070758"
